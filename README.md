@@ -62,7 +62,7 @@ without behavioral redesign. Tests were migrated from that same baseline.
 Source Git history for this closure names Feiyu-Liu as author (with AI
 co-authorship). The new repository starts with an independent snapshot.
 
-Original code is licensed under Apache-2.0; see `LICENSE`. Neo controls and
+Original code is licensed under MIT; see `LICENSE`. Neo controls and
 capsule tags are adaptations of MIT-licensed ChunUI and retain its attribution
 and full license in `NOTICE` and `third_party/CHUNUI_LICENSE`. These notices are
 not a claim to sole ownership of upstream code. See `THIRD_PARTY_NOTICES.md` for

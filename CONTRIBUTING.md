@@ -1,6 +1,6 @@
 # Contributing
 
-Changes intentionally submitted for inclusion are licensed under Apache-2.0,
+Changes intentionally submitted for inclusion are licensed under MIT,
 unless explicitly stated otherwise and agreed before inclusion. Keep third-party
 copyright and license notices intact. Confirm that you have the right to submit
 your contribution; do not copy incompatible code or private media into this repo.
