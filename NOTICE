@@ -1,0 +1,8 @@
+next_ui
+Copyright 2026 Feiyu-Liu
+
+NeoButton, NeoIconButton, their supporting theme values, and CapsuleTag
+adapt ChunUI's CCNeoButton and capsule tag families.
+ChunUI: Copyright (c) 2026 liseami (赵纯想), MIT License.
+The full upstream license is retained in third_party/CHUNUI_LICENSE.
+The Flutter adaptations and subsequent changes are by Feiyu-Liu.

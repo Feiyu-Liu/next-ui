@@ -1,0 +1,20 @@
+name: next_ui
+description: Reusable desktop controls extracted from SkillDeck's UI dependencies.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.13.4
+  flutter: '>=3.47.5'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  progressive_blur: ^0.0.2
+  smooth_corner: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  lucide_icons_flutter: 3.1.20
