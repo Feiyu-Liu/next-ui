@@ -7,7 +7,7 @@ for the extracted controls; the legacy private package only forwards them.
 
 - `NeoButton`, `NeoIconButton`, `NeoPressable`, `NeoSurface`, and their themes
 - `MorphingMenuButton`, controller, styles, and theme
-- `CapsuleTag`
+- `CapsuleTag`, `MiniFolderIcon`, and `NeumorphicNavBar`
 - `MyButtonGroup` and the theme shared with button tooltips
 - `MyTopProgressiveBlur`, including its shader precache entry point
 
@@ -57,7 +57,7 @@ Widget action(VoidCallback onPressed) => NeoButton(
 
 The extraction baseline is `my_ui` commit
 `3dc634e3ed8221b9c5032a2122f47bdbde32f73e`, not its current working tree.
-The eight complete support/component modules plus `MyButtonGroup` were copied
+The ten complete support/component modules plus `MyButtonGroup` were copied
 without behavioral redesign. Tests were migrated from that same baseline.
 Source Git history for this closure names Feiyu-Liu as author (with AI
 co-authorship). The new repository starts with an independent snapshot.
