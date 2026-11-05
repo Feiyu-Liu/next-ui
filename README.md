@@ -18,8 +18,10 @@ and `MyMenuButton` implementations are deliberately not included.
 
 ## Toolchain and validation
 
-Currently developed with Flutter **3.47.5** / Dart **3.13.4**. Older SDKs and
-mobile/web support are not promised. Desktop release evidence must distinguish
+Currently developed with Flutter **3.47.5** / Dart **3.13.4**. The manifest retains
+the source baseline constraints (Dart `^3.10.4`, Flutter `>=3.32.0`); those lower
+bounds are **unverified**, not newly certified compatibility. Extraction does
+not raise consumer SDK requirements. Mobile/web support is not promised. Desktop release evidence must distinguish
 macOS arm64, macOS Intel, and Windows; widget tests alone do not validate GPU
 shader rendering.
 

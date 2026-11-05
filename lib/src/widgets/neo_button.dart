@@ -896,8 +896,9 @@ class _NeoButtonOverlayPainter extends CustomPainter {
       // shrinks the corner radius by the same amount.
       final inset = borderWidth / 2;
       canvas.drawPath(
-        _squircle(math.max(0, radius - inset))
-            .getOuterPath(rect.deflate(inset)),
+        _squircle(
+          math.max(0, radius - inset),
+        ).getOuterPath(rect.deflate(inset)),
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = borderWidth

@@ -12,10 +12,8 @@ import 'morphing_menu_button_theme.dart';
 /// Builds the expanded card content for a [MorphingMenuButton].
 ///
 /// Call [close] after a selection when that action should collapse the card.
-typedef MorphingMenuContentBuilder = Widget Function(
-  BuildContext context,
-  VoidCallback close,
-);
+typedef MorphingMenuContentBuilder =
+    Widget Function(BuildContext context, VoidCallback close);
 
 /// Horizontal alignment of the expanded card relative to its trigger.
 enum MorphingMenuAlignment {
@@ -380,8 +378,9 @@ class _MorphingMenuButtonState extends State<MorphingMenuButton>
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted || !_expanded) return;
         if (_panelFocusScope.context == null) return;
-        final firstFocus = FocusTraversalGroup.of(_panelFocusScope.context!)
-            .findFirstFocus(_panelFocusScope, ignoreCurrentFocus: true);
+        final firstFocus = FocusTraversalGroup.of(
+          _panelFocusScope.context!,
+        ).findFirstFocus(_panelFocusScope, ignoreCurrentFocus: true);
         firstFocus?.requestFocus();
       });
       return;
@@ -657,10 +656,9 @@ class _MorphingMenuButtonState extends State<MorphingMenuButton>
             },
             child: OverlayPortal.overlayChildLayoutBuilder(
               controller: _portalController,
-              overlayChildBuilder: (
-                BuildContext overlayContext,
-                OverlayChildLayoutInfo info,
-              ) => _buildOverlay(overlayContext, info, style),
+              overlayChildBuilder:
+                  (BuildContext overlayContext, OverlayChildLayoutInfo info) =>
+                      _buildOverlay(overlayContext, info, style),
               child: CupertinoButton(
                 key: const ValueKey<String>('morphing-menu-button-trigger'),
                 focusNode: _triggerFocusNode,

@@ -65,8 +65,9 @@ class MiniFolderIcon extends StatelessWidget {
                   ),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                      color: const Color(0xFF000000)
-                          .withValues(alpha: dark ? 0.24 : 0.08),
+                      color: const Color(
+                        0xFF000000,
+                      ).withValues(alpha: dark ? 0.24 : 0.08),
                       blurRadius: width * 0.02,
                       offset: Offset(0, -height * 0.01),
                     ),
