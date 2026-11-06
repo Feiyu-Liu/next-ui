@@ -82,3 +82,13 @@ capsule tags are adaptations of MIT-licensed ChunUI and retain its attribution
 and full license in `NOTICE` and `third_party/CHUNUI_LICENSE`. These notices are
 not a claim to sole ownership of upstream code. See `THIRD_PARTY_NOTICES.md` for
 dependency licenses. Public release still requires final owner/privacy review.
+
+## Acknowledgements
+
+Some components, including the Neo buttons and capsule tags, are Flutter ports
+of ChunUI components. Thanks to the ChunUI authors for their original work.
+The original MIT copyright and license notices are preserved in
+[NOTICE](NOTICE) and [third_party/CHUNUI_LICENSE](third_party/CHUNUI_LICENSE).
+
+部分组件（包括 Neo 按钮和胶囊标签）是 ChunUI 组件的 Flutter 复刻版。
+感谢 ChunUI 作者的原创工作，原始 MIT 版权声明和许可证已保留在上述文件中。
