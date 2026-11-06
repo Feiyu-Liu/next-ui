@@ -35,6 +35,19 @@ flutter test --no-pub
 The lockfile is checked in for reproducible package tests. Hosted CI uses a
 read-only GitHub-hosted runner, with no private keys or signing credentials.
 
+## Component showcase
+
+The [example desktop app](example/README.md) demonstrates every included control
+with light/dark switching and local interactive examples. Run it on macOS:
+
+```sh
+cd example
+flutter pub get --enforce-lockfile
+flutter run -d macos
+```
+
+Windows and Linux runners are included but have not yet been built or validated.
+
 ## Installation
 
 Publication has not been authorized yet. During local integration use this
