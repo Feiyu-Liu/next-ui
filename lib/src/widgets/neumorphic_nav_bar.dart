@@ -36,6 +36,9 @@ class NeumorphicNavBar extends StatelessWidget {
   /// 外层白色边框的内边距
   final EdgeInsets padding;
 
+  /// Uniform inset between the track and the selected thumb.
+  final double thumbInset;
+
   /// 图标尺寸
   final double iconSize;
 
@@ -55,11 +58,13 @@ class NeumorphicNavBar extends StatelessWidget {
     required this.items,
     this.height = 92,
     this.padding = const EdgeInsets.all(10),
+    this.thumbInset = 6,
     this.iconSize = 22,
     this.labelFontSize = 11,
     this.labelSpacing = 2,
     this.smoothness = 0.8,
-  }) : assert(smoothness >= 0 && smoothness <= 1);
+  }) : assert(smoothness >= 0 && smoothness <= 1),
+       assert(thumbInset >= 0);
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +104,7 @@ class NeumorphicNavBar extends StatelessWidget {
         labelFontSize: labelFontSize,
         labelSpacing: labelSpacing,
         smoothness: smoothness,
+        thumbInset: thumbInset,
       ),
     );
   }
@@ -112,6 +118,7 @@ class _InnerTrack extends StatefulWidget {
   final double labelFontSize;
   final double labelSpacing;
   final double smoothness;
+  final double thumbInset;
 
   const _InnerTrack({
     required this.selectedIndex,
@@ -121,6 +128,7 @@ class _InnerTrack extends StatefulWidget {
     required this.labelFontSize,
     required this.labelSpacing,
     required this.smoothness,
+    required this.thumbInset,
   });
 
   @override
@@ -286,7 +294,7 @@ class _InnerTrackState extends State<_InnerTrack> {
                 width: itemWidth,
                 child: IgnorePointer(
                   child: Padding(
-                    padding: const EdgeInsets.all(6.0), // 内部滑块的边距
+                    padding: EdgeInsets.all(widget.thumbInset),
                     child: AnimatedScale(
                       key: const Key('neumorphic_nav_thumb_visual'),
                       scale: thumbScale,
@@ -301,7 +309,10 @@ class _InnerTrackState extends State<_InnerTrack> {
                               : const Color(0xFF222224),
                           shape: SmoothRectangleBorder(
                             borderRadius: BorderRadius.circular(
-                              trackHeight / 2,
+                              (trackHeight / 2 - widget.thumbInset).clamp(
+                                0.0,
+                                double.infinity,
+                              ),
                             ),
                             smoothness: widget.smoothness,
                           ),
